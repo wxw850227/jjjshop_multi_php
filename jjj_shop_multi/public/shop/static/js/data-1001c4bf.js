@@ -1,0 +1,1 @@
+import{i as t}from"./index-0e3e5afc.js";async function s(s){return t({url:"/shop/data.user/lists",method:"post",data:s})}async function a(s){return t({url:"/shop/data.region/lists",method:"post",data:s})}export{s as a,a as g};

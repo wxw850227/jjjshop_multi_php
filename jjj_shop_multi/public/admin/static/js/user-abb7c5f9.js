@@ -1,0 +1,1 @@
+import{i as t}from"./request-5f88d5f5.js";async function a(a){return t({url:"/admin/passport/login",method:"post",data:a})}async function n(a){return t({url:"/admin/admin.user/renew",method:"post",data:a})}export{n as e,a as l};

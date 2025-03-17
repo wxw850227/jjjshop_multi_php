@@ -1,0 +1,1 @@
+import{i as e}from"./index-3957abef.js";async function n(n){return e({url:"/supplier/index/base",method:"post",data:n})}async function t(n){return e({url:"/supplier/index/index",method:"post",data:n})}export{n as b,t as g};

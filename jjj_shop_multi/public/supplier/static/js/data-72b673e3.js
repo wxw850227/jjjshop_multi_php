@@ -1,0 +1,1 @@
+import{i as t}from"./index-3957abef.js";async function s(s){return t({url:"/supplier/data.user/lists",method:"post",data:s})}async function a(s){return t({url:"/supplier/data.region/lists",method:"post",data:s})}export{a,s as g};

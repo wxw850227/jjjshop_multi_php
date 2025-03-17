@@ -1,0 +1,1 @@
+import{i as s}from"./index-73113c1c.js";async function n(n){return s({url:"/shop/plus.sign/index",method:"get",data:n})}async function t(n){return s({url:"/shop/plus.sign/index",method:"post",data:n})}async function a(n){return s({url:"/shop/plus.sign/lists",method:"post",data:n})}export{a,n as g,t as s};

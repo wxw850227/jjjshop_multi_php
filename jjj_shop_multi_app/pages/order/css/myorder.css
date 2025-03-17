@@ -1,0 +1,202 @@
+page {
+	background-color: #f2f2f2;
+}
+
+.top-tabbar {
+	height: 96rpx;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	overflow: hidden;
+	overflow-x: auto;
+}
+
+.tab-item {
+	flex-shrink: 0;
+	white-space: nowrap;
+	flex: auto;
+}
+
+.order-list .order-head .state-text {
+	padding: 10rpx 12rpx;
+	margin-right: 21rpx;
+	border-radius: 4rpx;
+	background: #FFE7E4;
+	font-size: 22rpx;
+	color: #F6220C;
+}
+
+.shop-name {
+	font-size: 26rpx;
+	font-family: PingFang SC;
+	font-weight: 500;
+	color: #333333;
+}
+
+.order-list .item {
+	margin-bottom: 30rpx;
+	padding: 30rpx;
+	background: #ffffff;
+}
+
+.order-list .product-list,
+.order-list .one-product {
+	padding: 30rpx 0 27rpx 0;
+	height: 150rpx;
+}
+
+.one-product .pro-info {
+	padding: 0 21rpx 0 37rpx;
+	display: -webkit-box;
+	width: 361rpx;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	font-size: 26rpx;
+	color: #333333;
+}
+
+.order-list .cover,
+.order-list .cover image {
+	width: 150rpx;
+	height: 150rpx;
+	border-radius: 8rpx;
+}
+
+.order-list .total-count {
+	padding-left: 20rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.total-count .count {
+	padding-top: 16rpx;
+	color: #999999;
+	font-size: 22rpx;
+}
+
+.product-list .total-count {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.product-list .total-count .left-shadow {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -24rpx;
+	width: 24rpx;
+	overflow: hidden;
+}
+
+.product-list .total-count .left-shadow::after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 24rpx;
+	right: -12rpx;
+	display: block;
+	content: '';
+	background-image: radial-gradient(rgba(0, 0, 0, 0.2) 10%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 80%);
+}
+
+.order-list .order-bts {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.order-list .order-bts.presale {
+	display: block;
+	padding-top: 12rpx;
+}
+
+.order-list .order-bts button {
+	margin: 0;
+	padding: 0 30rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	margin-left: 20rpx;
+	font-size: 32rpx;
+	border: 1px solid #F6220C;
+	border-radius: 30px;
+	background: #ffffff;
+	white-space: nowrap;
+	color: #F6220C;
+	font-family: PingFang SC;
+}
+
+.order-list .order-bts button::after {
+	display: none;
+}
+
+.order-list .order-bts button.btn-border-red {
+	border: 1px solid $dominant-color;
+	font-size: 24rpx;
+	color: $dominant-color;
+}
+
+.order-list .order-bts button.btn-red {
+	background: linear-gradient(90deg, #FF6B6B 4%, #F6220C 100%);
+	border-radius: 30rpx;
+	font-size: 32rpx;
+	font-family: PingFang SC;
+	color: #ffffff;
+	border: none;
+}
+
+.buy-checkout {
+	width: 100%;
+}
+
+.buy-checkout .item {
+	min-height: 50rpx;
+	line-height: 50rpx;
+	padding: 20rpx;
+	display: flex;
+	justify-content: space-between;
+	font-size: 28rpx;
+}
+
+.buy-checkout .iconfont.icon-weixin {
+	color: #04be01;
+	font-size: 50rpx;
+}
+
+.buy-checkout .iconfont.icon-yue {
+	color: #f0de7c;
+	font-size: 50rpx;
+}
+
+.buy-checkout .item.active .iconfont.icon-xuanze {
+	color: #04be01;
+}
+
+.item-dianpu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 24rpx;
+	line-height: 30rpx;
+}
+
+.item-dianpu .icon-jiantou {
+	font-size: 24rpx;
+	color: #333333;
+}
+
+.item-d-l {
+	display: flex;
+}
+
+.icon-dianpu1 {
+	margin-right: 20rpx;
+	color: #333333;
+	font-size: 32rpx;
+}

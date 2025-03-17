@@ -1,0 +1,167 @@
+<template>
+  <div>
+    <div class="common-level-rail">
+      <el-button size="small" type="primary" @click="addCategory"
+        >添加分类</el-button
+      >
+    </div>
+    <div class="table-wrap">
+      <el-table :data="categoryData" style="width: 100%" v-loading="loading">
+        <el-table-column
+          prop="category_id"
+          label="分类ID"
+          width="180"
+        ></el-table-column>
+        <el-table-column prop="name" label="	分类名称"></el-table-column>
+        <el-table-column
+          prop="deposit_money"
+          label="	保证金(元)"
+        ></el-table-column>
+        <el-table-column
+          prop="create_time"
+          label="添加时间"
+          width="180"
+        ></el-table-column>
+        <el-table-column prop="name" label="操作" width="150">
+          <template #default="scope">
+            <el-button
+              @click="editCategory(scope.row)"
+              link
+              type="primary"
+              size="small"
+              >编辑</el-button
+            >
+            <el-button
+              @click="deleteCategory(scope.row)"
+              link
+              type="primary"
+              size="small"
+              >删除</el-button
+            >
+          </template>
+        </el-table-column>
+      </el-table>
+      <!--添加-->
+      <Add
+        v-if="open_add"
+        :open_add="open_add"
+        @closeDialog="closeDialogFunc($event, 'add')"
+      ></Add>
+
+      <!--编辑-->
+      <Edit ref="editRef"  @closeDialog="closeDialogFunc($event, 'edit')"></Edit>
+    </div>
+  </div>
+</template>
+
+<script>
+import { reactive, toRefs, defineComponent, onMounted } from "vue";
+import { Category, deleteCategory } from "@/api/supplier.js";
+import Edit from "./part/Edit.vue";
+import Add from "./part/Add.vue";
+import { deepClone } from "@/utils/base.js";
+export default defineComponent({
+  components: {
+    Edit,
+    Add,
+  },
+  setup() {
+    const state = reactive({
+      editRef: null,
+      /*分类*/
+      categoryData: [],
+      /*是否打开添加弹窗*/
+      open_add: false,
+      /*是否打开编辑弹窗*/
+      open_edit: false,
+      /*当前编辑的对象*/
+      userModel: {},
+      commentData: [],
+      /*是否加载完成*/
+      loading: true,
+    })
+    onMounted(()=>{
+      getTableList();
+    })
+    const getTableList = ()=>{
+      state.loading = true;
+      Category({}, true)
+        .then((data) => {
+          state.loading = false;
+          state.categoryData = data.data.category;
+        })
+        .catch((error) => {
+          state.loading = false;
+        });
+    }
+    return {
+      ...toRefs(state),
+      open,
+      getTableList,
+    };
+  },
+  methods: {
+    /*删除文章分类*/
+    deleteCategory(row) {
+      let self = this;
+      ElMessageBox.confirm("此操作将永久删除该记录, 是否继续?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning",
+      })
+        .then(() => {
+          self.loading = true;
+          deleteCategory(
+            {
+              category_id: row.category_id,
+            },
+            true
+          )
+            .then((data) => {
+              self.loading = false;
+              ElMessage({
+                message: data.msg,
+                type: "success",
+              });
+              self.getTableList();
+            })
+            .catch((error) => {
+              self.loading = false;
+            });
+        })
+        .catch(() => {});
+    },
+    handleClick(tab, event) {},
+
+    /*打开分类添加*/
+    addCategory() {
+      this.open_add = true;
+    },
+
+    /*打开分类编辑*/
+    editCategory(item) {
+      this.userModel = deepClone(item);
+      this.editRef.open(this.userModel);
+      // this.open_edit = true;
+    },
+
+    /*关闭弹窗*/
+    closeDialogFunc(e, f) {
+      if (f == "add") {
+        this.open_add = e.openDialog;
+        if (e.type == "success") {
+          this.getTableList();
+        }
+      }
+      if (f == "edit") {
+        this.open_edit = e.openDialog;
+        if (e.type == "success") {
+          this.getTableList();
+        }
+      }
+    },
+  },
+})
+</script>
+
+<style></style>

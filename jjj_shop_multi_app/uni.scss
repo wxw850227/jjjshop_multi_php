@@ -1,0 +1,399 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+
+/* 颜色变量 */
+$theme-map: null;
+$dominant-color: #e2231a;
+$orange-color: #ffb000;
+
+/* 行为相关颜色 */
+$uni-color-primary: #007aff;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+/* 文字基本颜色 */
+$uni-text-color: #333; //基本色
+$uni-text-color-inverse: #fff; //反色
+$uni-text-color-grey: #999; //辅助灰色，如加载更多的提示信息
+$uni-text-color-placeholder: #808080;
+$uni-text-color-disable: #c0c0c0;
+
+/* 背景颜色 */
+$uni-bg-color: #ffffff;
+$uni-bg-color-grey: #f8f8f8;
+$uni-bg-color-hover: #f1f1f1; //点击状态颜色
+$uni-bg-color-mask: rgba(0, 0, 0, 0.4); //遮罩颜色
+
+/* 边框颜色 */
+$uni-border-color: #c8c7cc;
+
+/* 尺寸变量 */
+
+/* 文字尺寸 */
+$uni-font-size-sm: 24upx;
+$uni-font-size-base: 28upx;
+$uni-font-size-lg: 32upx;
+
+/* 图片尺寸 */
+$uni-img-size-sm: 40upx;
+$uni-img-size-base: 52upx;
+$uni-img-size-lg: 80upx;
+
+/* Border Radius */
+$uni-border-radius-sm: 4upx;
+$uni-border-radius-base: 6upx;
+$uni-border-radius-lg: 12upx;
+$uni-border-radius-circle: 50%;
+
+/* 水平间距 */
+$uni-spacing-row-sm: 10px;
+$uni-spacing-row-base: 20upx;
+$uni-spacing-row-lg: 30upx;
+
+/* 垂直间距 */
+$uni-spacing-col-sm: 8upx;
+$uni-spacing-col-base: 16upx;
+$uni-spacing-col-lg: 24upx;
+
+/* 透明度 */
+$uni-opacity-disabled: 0.3; // 组件禁用态的透明度
+
+/* 文章场景相关 */
+$uni-color-title: #2c405a; // 文章标题颜色
+$uni-font-size-title: 40upx;
+$uni-color-subtitle: #555555; // 二级标题颜色
+$uni-font-size-subtitle: 36upx;
+$uni-color-paragraph: #3f536e; // 文章段落颜色
+$uni-font-size-paragraph: 30upx;
+
+/* start--主题色--start */
+$themes: (
+	theme0: (
+		font_color: #ff5704,
+		/* 主题色 */ background_color: #ff5704,
+		border_color: #ff5704,
+		opacify_background_0: rgba(255, 204, 0, 0.09),
+		text_color1: #ffffff,
+		text_color2: #ffffff,
+		price_color: #ff4c01,
+		/* 价格文字颜色 */ titleft1: #f11e0b,
+		titleft2: #f77636,
+		cart_left1: #ffcb05,
+		cart_left2: #fd9f01,
+		left_deg: 45deg,
+		right_deg: -45deg,
+		cart_right1: #fe632a,
+		cart_right2: #ff7a04,
+		bg-coupon: #ff4c01,
+		text-coupon: #ffffff,
+		bg-bargain: #f4dcd2,
+		bg-assemb: #ffffff,
+		bg-assemb2:
+			rgba(
+				$color: #ff4c01,
+				$alpha: 0.1
+			),
+		bg-tips:
+			rgba(
+				$color: #ff5704,
+				$alpha: 0.08
+			),
+		gray9: #999999,
+		bg-sign: #ff5704,
+		bg-sign-quan: #fbbd2f
+	),
+	theme1: (
+		font_color: #19ad57,
+		background_color: #19ad57,
+		border_color: #19ad57,
+		opacify_background_0: rgba(230, 11, 48, 0.05),
+		text_color1: #ffffff,
+		text_color2: #ffffff,
+		price_color: #e31c28,
+		/* 价格文字颜色 */ titleft1: #19ad57,
+		titleft2: #148d47,
+		cart_left1: rgba(25, 173, 87, 0.65),
+		cart_left2: rgba(20, 141, 71, 0.65),
+		left_deg: 0deg,
+		right_deg: 0deg,
+		cart_right1: #19ad57,
+		cart_right2: #148d47,
+		bg-coupon:
+			rgba(
+				$color: #dbf8e7,
+				$alpha: 0.6
+			),
+		text-coupon: #19ad57,
+		bg-bargain:
+			rgba(
+				$color: #ff4c01,
+				$alpha: 0.15
+			),
+		bg-assemb: #ffffff,
+		bg-assemb2:
+			rgba(
+				$color: #ff4c01,
+				$alpha: 0.1
+			),
+		bg-tips:
+			rgba(
+				$color: #19ad57,
+				$alpha: 0.08
+			),
+		gray9: #999999,
+		bg-sign: #19ad57,
+		bg-sign-quan: #ffad57
+	),
+	theme2: (
+		font_color: #ffcc00,
+		background_color: #ffcc00,
+		border_color: #ffcc00,
+		opacify_background_0: rgba(143, 45, 243, 0.05),
+		text_color1: #ffffff,
+		text_color2: #ffffff,
+		price_color: #f55234,
+		/* 价格文字颜色 */ titleft1: #f11e0b,
+		titleft2: #f77636,
+		cart_left1: #ffcc00,
+		cart_left2: #fd9f01,
+		left_deg: 0deg,
+		right_deg: 0deg,
+		cart_right1: #fc4528,
+		cart_right2: #fc7639,
+		bg-coupon: #fff3e5,
+		text-coupon: #f55234,
+		bg-bargain:
+			rgba(
+				$color: #ffcc00,
+				$alpha: 0.15
+			),
+		bg-assemb: #ffcc00,
+		bg-assemb2: #ffffff,
+		bg-tips:
+			rgba(
+				$color: #ffcc00,
+				$alpha: 0.08
+			),
+		gray9: #999999,
+		bg-sign: #ffcc00,
+		bg-sign-quan: #ffe373
+	),
+	/* 蓝*/ theme3:
+		(
+			font_color: #33a7ff,
+			background_color: #33a7ff,
+			border_color: #33a7ff,
+			opacify_background_0: rgba(51, 167, 255, 0.05),
+			text_color1: #ffffff,
+			text_color2: #ffffff,
+			price_color: #ff4645,
+			/* 价格文字颜色 */ titleft1: #1774ff,
+			titleft2: #0e6bf5,
+			cart_left1: rgba(23, 116, 255, 0.55),
+			cart_left2: rgba(14, 107, 245, 0.55),
+			left_deg: 0deg,
+			right_deg: 0deg,
+			cart_right1: #1774ff,
+			cart_right2: #0e6bf5,
+			bg-coupon: #fce1aa,
+			text-coupon: #8d5b22,
+			bg-bargain:
+				rgba(
+					$color: #1774ff,
+					$alpha: 0.15
+				),
+			bg-assemb: #ffffff,
+			bg-assemb2:
+				rgba(
+					$color: #e9f0f9,
+					$alpha: 0.5
+				),
+			bg-tips:
+				rgba(
+					$color: #33a7ff,
+					$alpha: 0.08
+				),
+			gray9: #999999,
+			bg-sign: #33a7ff,
+			bg-sign-quan: #73c2ff
+		),
+	/* 银灰*/ theme4:
+		(
+			font_color: #e4e4e4,
+			background_color: #e4e4e4,
+			border_color: #e4e4e4,
+			opacify_background_0: rgba(31, 197, 81, 0.05),
+			text_color1: #ffffff,
+			text_color2: #333333,
+			price_color: #ff4d4d,
+			/* 价格文字颜色 */ titleft1: #2e2e2e,
+			titleft2: #424242,
+			cart_left1: #e4e4e4,
+			cart_left2: #e4e4e4,
+			left_deg: 45deg,
+			right_deg: -45deg,
+			cart_right1: #2e2e2e,
+			cart_right2: #424242,
+			bg-coupon:
+				rgba(
+					$color: #818641,
+					$alpha: 0.1
+				),
+			text-coupon: #818641,
+			bg-bargain: #ffffff,
+			bg-assemb: #ffffff,
+			bg-assemb2: #e6e7e0,
+			bg-tips:
+				rgba(
+					$color: #e4e4e4,
+					$alpha: 0.08
+				),
+			gray9: #999999,
+			bg-sign: #e4e4e4,
+			bg-sign-quan: #f0ee6c
+		),
+	/* 棕*/ theme5:
+		(
+			font_color: #c8ba97,
+			background_color: #c8ba97,
+			border_color: #c8ba97,
+			opacify_background_0: rgba(255, 127, 0, 0.05),
+			text_color: #ffffff,
+			price_color: #e7032c,
+			/* 价格文字颜色 */ text_color1: #ffffff,
+			text_color2: #ffffff,
+			titleft1: #bfb18f,
+			titleft2: #c8ba97,
+			cart_left1: rgba(191, 177, 143, 0.6),
+			cart_left2: rgba(200, 186, 151, 0.6),
+			left_deg: 0deg,
+			right_deg: 0deg,
+			cart_right1: #bfb18f,
+			cart_right2: #c8ba97,
+			bg-coupon:
+				rgba(
+					$color: #e4ded0,
+					$alpha: 0.6
+				),
+			text-coupon: #8f7e6a,
+			bg-bargain: #ebe8de,
+			bg-assemb: #c8bb97,
+			bg-assemb2: #ffffff,
+			bg-tips:
+				rgba(
+					$color: #c8ba97,
+					$alpha: 0.08
+				),
+			gray9: #999999,
+			bg-sign: #c8ba97,
+			bg-sign-quan: #ffd773
+		),
+	/*紫*/ theme6:
+		(
+			font_color: #623ceb,
+			background_color: #623ceb,
+			border_color: #623ceb,
+			opacify_background_0: rgba(202, 164, 90, 0.05),
+			text_color1: #ffffff,
+			text_color2: #ffffff,
+			price_color: #e31c28,
+			/* 价格文字颜色 */ titleft1: #592ef7,
+			titleft2: #623ceb,
+			cart_left1: rgba(89, 46, 247, 0.45),
+			cart_left2: rgba(98, 60, 235, 0.45),
+			left_deg: 45deg,
+			right_deg: -45deg,
+			cart_right1: #592ef7,
+			cart_right2: #623ceb,
+			bg-coupon: #d5eafb,
+			text-coupon: #1a8af8,
+			bg-bargain:
+				rgba(
+					$color: #623ceb,
+					$alpha: 0.15
+				),
+			bg-assemb: #623ceb,
+			bg-assemb2: #ffffff,
+			bg-tips:
+				rgba(
+					$color: #623ceb,
+					$alpha: 0.08
+				),
+			gray9: #999999,
+			bg-sign: #623ceb,
+			bg-sign-quan: #9173ff
+		)
+);
+//遍历主题map
+@mixin themeify {
+	@each $theme-name, $theme-map in $themes {
+		$theme-map: $theme-map !global;
+
+		/* #ifdef MP-ALIPAY */
+		.#{$theme-name} & {
+			@content;
+		}
+		/* #endif */
+		/* #ifndef MP-ALIPAY */
+		[data-theme='#{$theme-name}'] & {
+			@content;
+		}
+		/* #endif */
+	}
+}
+
+@function themed($key) {
+	@return map-get($theme-map, $key);
+}
+
+//获取背景颜色
+@mixin background_color($color) {
+	@include themeify {
+		background-color: themed($color) !important;
+	}
+}
+
+//获取渐变背景颜色
+@mixin background_linear($color, $color1, $deg, $min, $max) {
+	@include themeify {
+		background: linear-gradient($deg, themed($color) $min, themed($color1) $max) !important;
+	}
+}
+//获取渐变背景颜色
+@mixin background_linearmore($color, $color1, $deg, $min, $max) {
+	@include themeify {
+		background: linear-gradient(themed($deg), themed($color) $min, themed($color1) $max) !important;
+	}
+}
+//获取字体颜色
+@mixin font_color($color) {
+	@include themeify {
+		color: themed($color) !important;
+	}
+}
+//获取主题背景下的字体颜色
+@mixin text_color($color) {
+	@include themeify {
+		color: themed($color) !important;
+	}
+}
+
+//获取边框颜色
+@mixin border_color($color) {
+	@include themeify {
+		border-color: themed($color) !important;
+	}
+}
+/* end--主题色--end */
