@@ -1,9 +1,4 @@
 <template>
-  <!--
-      	作者：luoyiming
-      	时间：2020-06-01
-      	描述：插件中心-文章-列表
-      -->
   <div>
     <div class="common-level-rail">
       <el-button size="small" type="primary" icon="Plus" @click="addArticle"
@@ -19,8 +14,9 @@
         ></el-table-column>
         <el-table-column prop="address" label="封面" width="50">
           <template #default="scope">
-            <img v-if="scope.row.image"
-			 v-img-url="scope.row.image.file_path"
+            <img
+              v-if="scope.row.image"
+              v-img-url="scope.row.image.file_path"
               width="30"
               height="30"
             />
