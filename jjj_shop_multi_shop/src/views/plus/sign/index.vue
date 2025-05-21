@@ -1,9 +1,4 @@
 <template>
-  <!--
-    作者：luoyiming
-    时间：2020-06-04
-    描述：插件中心-签到有礼
-  -->
   <div class="common-seach-wrap">
     <el-tabs v-model="activeName">
       <el-tab-pane label="签到设置" name="setting"> </el-tab-pane>

@@ -1,9 +1,4 @@
 <template>
-  <!--
-      作者 luoyiming
-      时间：2019-10-26
-      描述：设置-退货地址列表-修改
-  -->
   <div class="product-add">
     <!--form表单-->
     <el-form size="small" ref="form" :model="form" label-width="200px">
